@@ -1,0 +1,32 @@
+{
+  "name": "sorting-machine",
+  "version": "1.0.0",
+  "description": "Mad sorting machine",
+  "main": "src/index.js",
+  "scripts": {
+    "serve": "node src/index.js",
+    "test": "mocha src/**/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcbrwn/sorting-machine.git"
+  },
+  "keywords": [
+    "sort",
+    "qsort",
+    "bsort",
+    "madness"
+  ],
+  "author": "Danila Shutov <dcbrwn2@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dcbrwn/sorting-machine/issues"
+  },
+  "homepage": "https://github.com/dcbrwn/sorting-machine#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1"
+  }
+}
