@@ -23,6 +23,28 @@ function bubbleSort(array) {
   return array;
 }
 
+function shellSort(array) {
+  var i, j, k, len, tmp;
+  len = array.length;
+
+  for (k = Math.floor(len / 2); k > 0; k = Math.floor(k / 2)) {
+    for (i = k; i < len; i++) {
+      var tmp = array[i];
+      for (j = i; j >= k; j -= k) {
+        if (tmp > array[j - k]) {
+          array[j] = array[j - k];
+        } else {
+          break;
+        }
+      }
+
+      array[j] = tmp;
+    }
+  }
+
+  return array;
+}
+
 function insertSort(array) {
   var i, j, len = array.length;
   for (i = 1; i < len; i++) {
@@ -90,7 +112,7 @@ module.exports = {
     return quickSort(array, fixedMedianSelector);
   },
 
-  shellsSort: bubbleSort,
+  shellSort: shellSort,
   selectionSort: bubbleSort,
   insertionSort: insertSort,
 };
